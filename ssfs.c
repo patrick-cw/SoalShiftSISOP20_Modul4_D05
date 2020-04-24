@@ -21,7 +21,7 @@ void encryption(char x[1000]) {
 	for (i = 0; i < length; i++) {
 		for (j = 0; j < enc_length; j++) {
 			if(x[i] == encrypt[j]) {
-				x[i] = encrypt[(j+length)%enc_length];
+				x[i] = encrypt[(j+10)%enc_length];
 				break;
  			}
 		}
@@ -36,7 +36,7 @@ void decryption(char x[1000]) {
 	for (i = 0; i < length; i++){
 		for (j = 0; j < enc_length; j++){
 		    if(x[i] == encrypt[j]){
-                x[i] = encrypt[(j + enc_length - length) % enc_length];
+                x[i] = encrypt[(j-10) % enc_length];
                 break;
  			}
 		}
